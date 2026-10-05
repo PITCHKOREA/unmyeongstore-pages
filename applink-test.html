@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow" />
+<title>앱 링크 확인</title>
+<!--
+  31b 확인용 — **카카오톡 안에서 앱 링크가 열리는지** 보는 페이지입니다.
+
+  31b 의 '앱으로 가져가기' 는 코드를 글자로도 보여 주고 버튼으로도 엽니다.
+  글자는 어디서나 되지만, 버튼(unmyeongstore://…)은 카카오톡 인앱 브라우저에서
+  막히는 경우가 있습니다. 막히는지 아닌지를 **오너 기기에서 한 번** 보려는
+  것이고, 결과에 따라 웹 문구를 다르게 씁니다.
+
+  ⚠️ 서비스 페이지가 아닙니다. 링크를 아는 사람만 들어옵니다(noindex).
+     확인이 끝나면 지워도 됩니다.
+-->
+<style>
+  :root { color-scheme: dark; --bg:#241B3C; --on:#F5EEFF; --dim:#BCACE0; --gold:#FFD07A; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:28px 22px calc(28px + env(safe-area-inset-bottom));
+         background:var(--bg); color:var(--on);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif; }
+  h1 { font-size:20px; margin:0 0 6px; }
+  p  { color:var(--dim); font-size:14px; margin:0 0 14px; }
+  ol { color:var(--dim); font-size:14px; padding-left:20px; margin:0 0 18px; }
+  a.btn { display:block; padding:15px 18px; border-radius:16px; background:var(--gold);
+          color:#3A2A0E; font-weight:800; text-align:center; text-decoration:none; margin-bottom:10px; }
+  a.ghost { background:transparent; border:1px solid rgba(255,255,255,.18); color:var(--on); }
+  .note { font-size:12.5px; color:#8A7BB0; }
+  code { color:var(--gold); }
+</style>
+</head>
+<body>
+  <h1>앱 링크 확인</h1>
+  <p>운명잡화점 앱이 깔린 기기에서, <strong>카카오톡 안에서</strong> 이 페이지를 열고 아래를 눌러 주세요.</p>
+
+  <ol>
+    <li>아래 <strong>앱 열기</strong>를 누릅니다.</li>
+    <li>앱이 뜨면 — 됩니다.</li>
+    <li>아무 일도 안 일어나거나 오류가 보이면 — 막힌 것입니다.</li>
+  </ol>
+
+  <a class="btn" href="unmyeongstore://home">앱 열기</a>
+  <a class="btn ghost" href="unmyeongstore://claim?c=ABCD2345">앱 열기 (코드까지 함께)</a>
+
+  <p class="note">
+    두 번째 버튼은 앱의 가져오기 화면이 <code>ABCD2345</code> 를 받아 채우는지까지 봅니다.
+    그 코드는 없는 코드라 <strong>넣어도 실패가 맞습니다</strong> — 화면이 뜨고 칸이 채워지는지만 보면 됩니다.
+  </p>
+  <p class="note">
+    둘 다 안 되면 사파리에서 같은 주소를 열어 다시 눌러 보세요.
+    사파리에서는 되는데 카카오톡에서만 안 되면, 그게 알고 싶던 답입니다.
+  </p>
+</body>
+</html>
